@@ -1,0 +1,138 @@
+/* Our Future CSS Styles */
+
+/* Define CSS variables for stripe and rail dimensions */
+:root {
+  --stripe: calc(100vh / 13);
+}
+
+/* this design creates a repeating linear gradient background with red and white stripes, representing the American flag*/
+body {
+  margin: 0;
+  min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+
+  background-image: repeating-linear-gradient( /* Creates a repeating linear gradient background (American Flag stripes */
+    to bottom, /* Direction of the gradient */
+    #B22234 0 var(--stripe), /* Red stripe */
+    #FFFFFF var(--stripe) calc(var(--stripe) * 2) /* White stripe */
+  );
+
+  /* Keeps the stripe field stable while scrolling */
+  background-attachment: fixed;
+}
+
+/* Define CSS variables for rail and tile dimensions */
+:root {
+  --rail-width: 50px; /* Sets the width of the rail */
+  --tile-size: 42px; /* Sets the size of the tile */
+}
+
+body {
+    line-height: 1.6; /* Sets a comfortable line height for better readability */
+}
+
+section {
+  position: relative; /* Ensures that any absolutely positioned child elements are positioned relative to the body */
+}
+
+section p {
+  margin: 0 auto;
+  max-width: 80ch; /* Allows for 85 characters before wrapping to the next line */
+}
+
+section::before {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions the pseudo-element fixed relative to the viewport */
+    top: 0;
+    bottom: 0;
+    left: 0; /* Positions the rail on the left side of the viewport */
+    width: var(--rail-width); /* Sets the width of the rail */
+    z-index: 0; /* Ensures the rail is behind other content */
+    pointer-events: none; /* Ensures the rail doesn't interfere with user interactions */
+
+    /* one blue square with white star, repeated vertically */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%230B3D91'/%3E%3Cpolygon fill='white' points='28,10 31.8,21.2 43.6,21.2 34,28.1 37.7,39.2 28,32.4 18.3,39.2 22,28.1 12.4,21.2 24.2,21.2'/%3E%3C/svg%3E");
+    background-repeat: repeat-y;
+    background-size: var(--tile-size) var(--tile-size);
+    background-position: center top;
+}
+
+section::after {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions the pseudo-element fixed relative to the viewport */
+    top: 0;
+    bottom: 0;
+    right: 0; /* Positions the rail on the right side of the viewport */
+    width: var(--rail-width); /* Sets the width of the rail */
+    z-index: 0; /* Ensures the rail is behind other content */
+    pointer-events: none; /* Ensures the rail doesn't interfere with user interactions */
+
+    /* one blue square with white star, repeated vertically */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%230B3D91'/%3E%3Cpolygon fill='white' points='28,10 31.8,21.2 43.6,21.2 34,28.1 37.7,39.2 28,32.4 18.3,39.2 22,28.1 12.4,21.2 24.2,21.2'/%3E%3C/svg%3E");
+    background-repeat: repeat-y;
+    background-size: var(--tile-size) var(--tile-size);
+    background-position: center top;
+}
+
+section {
+    border: 3px solid #ffffff; /* Sets the border width to 3 pixels and color to white */
+    border-radius: 10px; /* Rounds the corners of the box for a softer look */
+    padding: 20px; /* Adds padding inside the box for better spacing */
+    margin: 20px auto; /* Centers the box horizontally and adds vertical spacing */
+    max-width: 900px; /* Sets a maximum width for the box to prevent it from stretching too wide on large screens */
+    background-color: #000057; /* Semi-transparent black background for better readability */
+    color: #ffffff; /* Sets the default text color to a light shade for better contrast against the dark background */
+}
+
+h2 {
+  margin: 10px auto;
+}
+
+h2, h3, footer{
+  color: #ffffff; /* Sets the text color for headings to white */
+  text-align: center; /* Centers the text for headings */
+}
+
+@media (max-width: 900px) {
+  /* Define CSS variables for rail and tile dimensions */
+  :root {
+    --rail-width: 45px; /* Sets the width of the rail */
+    --tile-size: 30px; /* Sets the size of the tile */
+  }
+
+  section::before {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions the pseudo-element fixed relative to the viewport */
+    top: 0;
+    bottom: 0;
+    left: 0; /* Positions the rail on the left side of the viewport */
+    width: var(--rail-width); /* Sets the width of the rail */
+    z-index: 0; /* Ensures the rail is behind other content */
+    pointer-events: none; /* Ensures the rail doesn't interfere with user interactions */
+  }
+  section {
+    padding: 10px;
+  }
+
+  section p {
+    margin: 0 auto;
+    max-width: 70ch; /* Allows for 85 characters before wrapping to the next line */
+  }
+}
+
+@media (max-width: 600px) {
+    /* Define CSS variables for rail and tile dimensions */
+  :root {
+    --rail-width: 25px; /* Sets the width of the rail */
+    --tile-size: 15px; /* Sets the size of the tile */
+  }
+
+  section {
+    padding: 8px;
+  }
+
+  section p {
+    margin: 0 auto;
+    max-width: 50ch; /* Allows for 85 characters before wrapping to the next line */
+    text-align: center;
+  }
+}

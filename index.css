@@ -2,35 +2,62 @@
 /* For the body and background */
 body {
     font-family: "Times New Roman", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('Images/Varigated_Blue_Reverse_Radial.jpg'); /* Change to an image */
+    background-image: url('Images/Varigated_Blue_Reverse_Radial.jpg'); /* Background radial */
     background-size: cover; /* Ensures the background image covers the entire viewport */
     background-position: center; /* Centers the background image */
     color: #f2f6ff;
     line-height: 1.6;
 }
 
+body, header, #hero, #contact, footer, .social-box-1, .social-box-2, .Youtube, .Spotify, .iHeartRadio,
+h1, h2, h3, #index-page-nav {
+    text-align: center; /* Centers the content within the section */
+}
+
+/*Style for navigation list items, adds spacing and padding for better readability*/
+body, nav li, #index-page-nav {
+    margin: 0;
+    padding: 0;
+}
+
+/*Style for the header, adds padding to create space around the content and improve readability*/   
+header {
+    padding: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for the header */
+}
+
+header, main, nav, footer, #index-page-nav  {
+    max-width: 1000px; /* Sets a maximum width for the navigation bar to prevent it from stretching too wide on large screens */
+}
+
+header, #hero, #contact, #about, #podcasts {
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 ul {
     list-style-type: none; /* Removes default bullet points from the list */
 }
 
+h1, h2, h3, a, footer, .social-box-1, .social-box-2, .Youtube, .Spotify, .iHeartRadio {
+    color: #ffffff; /* White color for headings */
+}
+
 /*Style for heading 1, 2, and 3*/
 h1, h2, h3 {
-    color: #ffffff; /* White color for headings */
-    text-align: center; /* Center-aligns the headings for a balanced look */
     padding: 0px 15px; /* Adds padding to the left and right of headings for better spacing on smaller screens */
 }
 
 a {
-    color: #ffffff;
-    text-decoration: none;
+    text-decoration: none; /* Removes the underline */
 }
+
 /*Style for links on hover*/
 a:hover {
     color: #f6ff00;
     text-decoration: underline;
-    
 }
 
 /*Style for links when they are focused (tabbing through the content links), adds an outline for better accessibility*/
@@ -38,30 +65,37 @@ a:focus-visible {
     outline: 2px solid #94ff97;
     outline-offset: 4px;
 }
+
+main, nav, header, section p {
+    margin: 0 auto; /* Centers the navigation bar horizontally within the viewport */
+}
+
 /*Style for the main content area and sections*/
 main {
     padding: 24px;
-    max-width: 1024px;
-    margin: 0 auto;
 }
+
 /*Style for sections and navigation list items*/
 section { /* Adds spacing between sections for better readability */
     margin-bottom: 32px;
 }
 
-/*Style for navigation unordered list and items and removes bullet points*/
-nav {
-    max-width: 1020px; /* Sets a maximum width for the navigation bar to prevent it from stretching too wide on large screens */
-    margin: 0 auto;/* Centers the navigation bar horizontally within the viewport */
-    justify-content: space-between; /* Aligns navigation items to the start of the nav bar */
-    gap: 12px; /* Adds space between navigation items for better readability */
-    padding: 0 15px; /* Adds horizontal padding to the nav bar for better spacing on smaller screens */
+nav, nav ul, .about-layout, .podcast-grid, #index-page-nav {
     display: flex; /* Uses flexbox to layout navigation items in a row */ 
-    align-items: center; /* Vertically centers the navigation items within the nav bar */
+}
+
+nav, #index-page-nav {
+    align-items: center; /* Vertically centers the navigation items within the bar */
+    justify-content: center; /* Aligns navigation items to the center of the bar */
+}
+
+/* Style for navigation unordered list and items */
+nav { 
+    gap: 15px; /* Adds space between navigation items for better readability */
+    padding: 0 15px; /* Adds horizontal padding to the nav bar for better spacing on smaller screens */
 } 
 
-nav h3 {
-    margin-left: auto; /* Pushes the h3 element to the right side of the navigation bar */
+nav h3, nav ul {
     padding: 0;/* Removes any default padding from the h3 element for a cleaner look */
 }
 
@@ -73,43 +107,36 @@ nav a {
     border-radius: 999px;
     background-color: rgba(255, 255, 255, 0.08);
 }
-nav ul {
-    display: flex; /* Uses flexbox to layout navigation items in a row */
-    flex-wrap: wrap; /* Allows navigation items to wrap to the next line on smaller screens */
-    gap: 16px; /* Adds space between navigation items for better readability */
-    margin-left: auto; /* Pushes the navigation list to the right side of the navigation bar */
-    padding: 0; /* Removes default padding from the list for a cleaner look */
+
+#index-page-nav a {
+    padding: 3px 6px;
+    display: contents;
+    border: none;
 }
 
-/*Style for navigation list items, adds spacing and padding for better readability*/
-nav li {
-    margin: 0;
-    padding: 0;
+nav ul, .about-layout, .podcast-grid {
+    flex-wrap: wrap; /* Allows navigation items to wrap to the next line on smaller screens */    
 }
+
+nav ul {
+    gap: 16px; /* Adds space between navigation items for better readability */
+    margin-left: 0; /* Pushes the navigation list to the right side of the navigation bar */
+}
+
 /*Style for the hero section, adds a semi-transparent background, border, padding, and rounded corners for a visually appealing look*/
 #hero,
 #contact,
 #about,
 #podcasts {
     background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
-    border: 3px solid rgba(255, 255, 255, 0.2);
     padding: 40px 20px;
-    border-radius: 10px;
 }
+
 /*Style for the hero section, makes it slightly more opaque and adds a thicker border for emphasis*/   
 #hero {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); /* Adds a subtle shadow for depth */
     background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque for the hero section */
     border: 4px solid rgba(255, 255, 255, 0.3);
-    text-align: center; /* Centers the content within the hero section */
-}
-/*Style for the header, adds padding to create space around the content and improve readability*/   
-header {
-    padding: 64px 40px;
-    text-align: center;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for the header */
 }
 
 #hero img {
@@ -127,9 +154,6 @@ header {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
     transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect on hover */
 }
-#contact {
-    text-align: center; /* Centers the content within the contact section */
-}
 
 #about:hover,
 #contact:hover,
@@ -138,8 +162,6 @@ header {
 }
 
 footer {
-    color: #ffffff;
-    text-align: center;
     padding: 32px 24px;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     margin-top: 48px;
@@ -147,17 +169,13 @@ footer {
 }
 
 section p {
-    margin: 0 auto;
     max-width: 70ch;
 }
 
-
 .about-layout {
-    display: flex;
     align-items: flex-start;
     gap: 16px;
-    flex-wrap: wrap;
-    }
+}
 
 .about-image-1,
 .about-image-2 {
@@ -193,15 +211,11 @@ section p {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     margin-bottom: 9px; /* Adds bottom spacing between the two social boxes */
     margin-left: 10px; /* Adds left spacing to separate the social boxes from other content */
-    text-align: center;
     text-decoration: none;
-    color: #ffffff;
 }
 
 /* Style for the podcast grid layout, creates a responsive grid with three columns and spacing between the podcast boxes */
 .podcast-grid {
-    display: flex; /* Uses flexbox to layout the podcast boxes in a row */
-    flex-wrap: wrap; /* Allows the podcast boxes to wrap to the next line on smaller screens */
     gap: 10px; /* Adds space between the podcast boxes for better readability */
     justify-content: space-between; /* Distributes space evenly between the podcast boxes */
     padding: 0px; /* Removes default padding from the podcast grid for a cleaner look */
@@ -218,9 +232,7 @@ semi-transparent background for a modern and clean appearance */
     border-radius: 11px; /* Rounds the corners of the social boxes for a softer look */
     background-color: rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    text-align: center;
     text-decoration: none;
-    color: #ffffff;
 }
 
 .youtube-img, .rss-img {

@@ -27,8 +27,8 @@ header {
     background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for the header */
 }
 
-header, main, nav, footer, #index-page-nav  {
-    max-width: 1000px; /* Sets a maximum width for the navigation bar to prevent it from stretching too wide on large screens */
+header, main, nav, #index-page-nav  {
+    max-width: 1000px; /* Sets a maximum width to prevent it from stretching too wide on large screens */
 }
 
 header, #hero, #contact, #about, #podcasts {
@@ -269,6 +269,9 @@ semi-transparent background for a modern and clean appearance */
         max-width: 72px;
         max-height: 72px;
     }
+    nav a {
+        padding: 5px 10px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -304,5 +307,8 @@ semi-transparent background for a modern and clean appearance */
     .rss-img {
         max-width: 64px;
         max-height: 64px;
+    }
+    nav a {
+        padding: 3px 7px;
     }
 }

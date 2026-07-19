@@ -8,7 +8,7 @@ body {
     background-color: #ffffff; /* Set background color to white */
 }
 
-body, header, #employment, #volunteer, #education, .skill-box, #jump {
+body, header, #employment, #volunteer, #education, .skill-box {
     text-align: center; /* Center-align text for the body and specific sections */
 }
 
@@ -18,7 +18,7 @@ header, #employment, #volunteer, #education, .skill-box {
 }
 
 /*Style for the header, adds padding to create space around the content and improve readability*/   
-header, main, nav, #employment ul, #scroll-box, #jump  {
+header, main, nav, #employment ul, #scroll-box {
     max-width: 1000px; /* Sets a maximum width to prevent it from stretching too wide on large screens */
 }
 
@@ -71,17 +71,17 @@ a:focus-visible {
     outline-offset: 4px;
 }
 
-nav, nav ul, .intro-row, #jump {
+nav, nav ul, .intro-row {
     display: flex; /* Uses flexbox to layout navigation items in a row */ 
 }
 
-nav, .intro-row, #jump {
+nav, .intro-row {
     align-items: center; /* Vertically centers the navigation items within the nav bar */
 }
 
-/*Style for navigation unordered list and items and removes bullet points*/
+/*Style for navigation items */
 nav {
-    justify-content: center; /* Aligns navigation items to the start of the nav bar */
+    justify-content: center; /* Aligns navigation items to the center the nav bar */
     gap: 12px; /* Adds space between navigation items for better readability */
     padding: 13px; /* Adds horizontal padding to the nav bar for better spacing on smaller screens */
 } 
@@ -110,33 +110,6 @@ nav li, .intro-row h1 {
     margin: 0;
 }
 
-#jump {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-}
-
-#jump a {
-    padding: 3px 6px;
-    display: contents;
-    border: none;
-}
-
-#jump ul {
-    align-items: center;
-}
-
-@media (max-width: 900px) {
-    main {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
-    .img-1,
-    .img-2 {
-        max-width: 85px; /* Adjust the maximum width for smaller screens */
-        max-height: 85px; /* Adjust the maximum height for smaller screens */
-    }
-}
-
 #scroll-box, #employment ul {
     overflow-y: auto; /* Enable vertical scrolling */
 }
@@ -144,7 +117,7 @@ nav li, .intro-row h1 {
 /* Style for the scrollable box containing the Skill Sets */
 #scroll-box {
     margin-top: 20px;
-    max-height: 900px;
+    max-height: 977px;
     border: 1px solid #707070; /* Adds a border to the scroll box */
 }
 
@@ -167,4 +140,15 @@ nav li, .intro-row h1 {
 
 .intro-row {
     justify-content: center;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+    .img-1,
+    .img-2 {
+        max-width: 85px; /* Adjust the maximum width for smaller screens */
+        max-height: 85px; /* Adjust the maximum height for smaller screens */
+    }
 }

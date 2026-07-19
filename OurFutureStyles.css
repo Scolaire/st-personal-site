@@ -31,7 +31,7 @@ body {
 }
 
 section {
-  position: relative; /* Ensures that any absolutely positioned child elements are positioned relative to the body */
+  position: relative; /* Ensures that any absolutely positioned child elements are positioned relative to the section */
 }
 
 section p {
@@ -41,7 +41,7 @@ section p {
 
 section::before {
     content: ""; /* Creates an empty pseudo-element */
-    position: absolute; /* Positions the pseudo-element fixed relative to the viewport */
+    position: absolute; /* Positions the pseudo-element absolute relative to the viewport */
     top: 0;
     bottom: 0;
     left: 0; /* Positions the rail on the left side of the viewport */
@@ -83,6 +83,56 @@ section {
     color: #ffffff; /* Sets the default text color to a light shade for better contrast against the dark background */
 }
 
+main h2{
+    color: #000057;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+}
+
+ul {
+    list-style-type: none; /* Removes default bullet points from the list */
+}
+
+nav ul {
+    gap: 16px; /* Adds space between navigation items for better readability */
+    margin-left: 0; /* Pushes the navigation list to the right side of the navigation bar */
+    flex-wrap: wrap; /* Allows navigation items to wrap to the next line on smaller screens */
+}
+
+nav, nav ul {
+    display: flex; /* Uses flexbox to layout navigation items in a row */
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav h3, nav ul {
+    padding: 0;/* Removes any default padding from the h3 element for a cleaner look */
+}
+
+/* makes navigation links look like buttons with padding, border, rounded corners, and a semi-transparent background for a modern and clean appearance */
+nav a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    background-color: #B22234;
+    color: #ffffff;
+}
+
+nav {
+    align-items: center; /* Vertically centers the navigation items within the bar */
+    justify-content: center; /* Aligns navigation items to the center of the bar */
+    gap: 15px; /* Adds space between navigation items for better readability */
+    padding: 0 15px; /* Adds horizontal padding to the nav bar for better spacing on smaller screens */
+    max-width: 1000px; /* Sets a maximum width for the navigation bar to prevent it from stretching too wide on large screens */
+    margin: 0 auto; /* Centers the navigation bar horizontally within the viewport */
+}
+
 h2 {
   margin: 10px auto;
 }
@@ -117,6 +167,9 @@ h2, h3, footer{
     margin: 0 auto;
     max-width: 70ch; /* Allows for 85 characters before wrapping to the next line */
   }
+  nav a {
+    padding: 5px 10px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -134,5 +187,9 @@ h2, h3, footer{
     margin: 0 auto;
     max-width: 50ch; /* Allows for 85 characters before wrapping to the next line */
     text-align: center;
+  }
+
+  nav a {
+      padding: 3px 7px;
   }
 }

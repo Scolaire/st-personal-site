@@ -45,7 +45,7 @@ body::after {
 
 main {
     padding: 24px; /* Adds padding to the inside of the main element */
-    max-width: 1024px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -115,6 +115,13 @@ nav {
 }
 
 footer {
+    padding: 32px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 48px;
+    color: #ffffffb3;
+}
+
+footer {
     text-align: center; /* Center-aligns the footer content for a balanced look */
 }
 
@@ -166,7 +173,7 @@ footer {
         text-align: center;
         padding: 5px;
     }
-        nav a {
+    nav a {
         padding: 3px 7px;
     }
 }
